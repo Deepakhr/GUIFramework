@@ -12,11 +12,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.io.Files;
 /**
  * 
  * @author Deepak
@@ -273,6 +276,67 @@ public class WebDriverUtility {
 		FileUtils.copyFile(srcFile, new File("./screenshot/"+testName+".png"));
 	   
 	}
+	
+	 /**
+     * Maximizes the browser window.
+     * 
+     * @param driver the WebDriver instance
+     * 
+     * @author Akash Deb
+     */
+    public void maximizeWindow(WebDriver driver) {
+        driver.manage().window().maximize();
+    }
+
+  
+    /**
+     * Waits until the specified web element is clickable.
+     * 
+     * @param driver the WebDriver instance
+     * @param element the WebElement to wait for
+     * 
+     * @author Akash Deb
+     */
+    public void waitElementToBeClickable(WebDriver driver, WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    /**
+     * Takes a screenshot of the current browser window and saves it to the specified file path.
+     * 
+     * @param driver the WebDriver instance
+     * @param fileName the name of the file to save the screenshot as
+     * @throws WebDriverException if there is an issue with the WebDriver instance
+     * @throws IOException if there is an issue saving the screenshot file
+     * 
+     * @author Akash Deb
+     */
+    public static void takeScreenshot(WebDriver driver, String fileName) throws WebDriverException, IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        Files.copy(ts.getScreenshotAs(OutputType.FILE), new File(".\\src\\test\\resources\\screenshots\\" + fileName + ".png"));
+    }
+
+    /**
+     * Switches the WebDriver context to a window with a title that contains the specified text.
+     * 
+     * @param driver the WebDriver instance
+     * @param titleToSwitch the title of the window to switch to
+     * 
+     * @author Akash Deb
+     */
+    public void switchToWindow(WebDriver driver, String titleToSwitch) {
+        Set<String> allIDs = driver.getWindowHandles();
+
+        for (String id : allIDs) {
+            driver.switchTo().window(id);
+            String currentTitle = driver.getTitle();
+
+            if (currentTitle.contains(titleToSwitch)) {
+                break;
+            }
+        }
+    }
 	
 }
 
