@@ -9,6 +9,8 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import com.comcast.crm.ipathconstant.IPathConstant;
 /**
  * 
  * @author Deepak
@@ -110,6 +112,41 @@ public class ExcelUtility {
 		}
 		wb.close();
 		return value;
+	}
+
+	/**
+	 * @author Akash Deb
+	 * @param sheetName
+	 * @param rowNum
+	 * @param celNum
+	 * @return
+	 * @throws Throwable
+	 */
+	public String getStringDataFromExcel(String sheetName, int rowNum, int celNum) throws Throwable {
+
+		FileInputStream fis = new FileInputStream(IPathConstant.EXCEL_FILE_PATH);
+		Workbook wb = WorkbookFactory.create(fis);
+		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getStringCellValue();
+		wb.close();
+		return data;
+	}
+	
+	/**
+	 * @author Akash Deb
+	 * @param sheetName
+	 * @param rowNum
+	 * @param celNum
+	 * @return
+	 * @throws Throwable
+	 */
+	
+	public long getNumericDataFromExcel(String sheetName, int rowNum, int celNum) throws Throwable {
+
+		FileInputStream fis = new FileInputStream(IPathConstant.EXCEL_FILE_PATH);
+		Workbook wb = WorkbookFactory.create(fis);
+		long data = (long)wb.getSheet(sheetName).getRow(rowNum).getCell(celNum).getNumericCellValue();
+		wb.close();
+		return data;
 	}
 
 

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="com.comcast.crm.listenerutility.ListImpClass"/>
+    <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
     <classes>
-      <class name="practice.test.InvoiceTest">
+      <class name="com.crm.comcast.organization_test.CreateOrganizationTest">
         <methods>
-          <include name="createInvoiceTest"/>
+          <include name="configBM"/>
+          <include name="createOrganizationWithPhoneNumberDetails"/>
+          <include name="createOrganizationWithMandatoryInformationTest"/>
+          <include name="configAM"/>
+          <include name="createOrganizationWithIndustryDetails"/>
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="configAS"/>
           <include name="configAC"/>
-          <include name="configBM"/>
-          <include name="configAM"/>
         </methods>
-      </class> <!-- practice.test.InvoiceTest -->
+      </class> <!-- com.crm.comcast.organization_test.CreateOrganizationTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
