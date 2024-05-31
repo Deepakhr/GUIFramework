@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.comcast.crm.listenerutility.ListImpClass"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="practice.test.InvoiceTest">
+      <class name="com.hsbc.bfsi.internetBanking.registerInternetBankingTest">
         <methods>
-          <include name="createInvoiceTest"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
+          <include name="registerTest"/>
           <include name="configBM"/>
           <include name="configAM"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
         </methods>
-      </class> <!-- practice.test.InvoiceTest -->
+      </class> <!-- com.hsbc.bfsi.internetBanking.registerInternetBankingTest -->
+      <class name="com.hsbc.bfsi.applyDebitCard.applyDebitCardTest">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="applyDebitTest"/>
+        </methods>
+      </class> <!-- com.hsbc.bfsi.applyDebitCard.applyDebitCardTest -->
+      <class name="com.hsbc.bfsi.openAccount.openAccountTest">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="staffLoginTest"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="creditCustomerTest"/>
+        </methods>
+      </class> <!-- com.hsbc.bfsi.openAccount.openAccountTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

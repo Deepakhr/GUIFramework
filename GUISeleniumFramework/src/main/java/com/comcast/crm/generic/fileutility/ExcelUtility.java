@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -57,11 +58,18 @@ public class ExcelUtility {
 	public void setDataIntoExcel(String sheetName , int rowNum , int celNum , String data) throws EncryptedDocumentException, IOException {
 		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");
 		Workbook wb =  WorkbookFactory.create(fis);
-		wb.getSheet(sheetName).getRow(rowNum).createCell(celNum);
+		Cell block = wb.getSheet(sheetName).getRow(rowNum).createCell(celNum);
+		block.setCellValue(data);
 		
 		FileOutputStream fos = new FileOutputStream("./testdata/testScriptdata.xlsx");
 		wb.write(fos);
 		wb.close();
+		
+		
+		
+		
+		
+		
 	} 
 	
 	

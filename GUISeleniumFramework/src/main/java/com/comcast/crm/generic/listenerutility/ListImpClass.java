@@ -13,6 +13,7 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -28,13 +29,15 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 	public static ExtentTest test;
 	
 	public void onStart(ISuite suite) {
-		// TODO Auto-generated method stub
-		System.out.println("Report confifguration");
+		
+		Reporter.log(">>>REPORT CONFIGURATION<<<",true);
+//		test.log(Status.INFO,">>>REPORT CONFIGURATION<<<");
+
 	    String time = 	new Date().toString().replace(" ", "_").replace(":", "_");
 
 		ExtentSparkReporter spark = new ExtentSparkReporter("./AdvanceReport/report_"+time+".html");
-		spark.config().setDocumentTitle("CRM Test Suite Results");
-		spark.config().setReportName("CRM Report");
+		spark.config().setDocumentTitle("BFSI Online_Banking_System Test Suite Results");
+		spark.config().setReportName("BFSI Online_Banking_System Report");
 		spark.config().setTheme(Theme.DARK);
 		// add Env information & create test
 		report = new ExtentReports();
@@ -45,23 +48,24 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 	}
 
 	public void onFinish(ISuite suite) {
-		// TODO Auto-generated method stub
-		System.out.println("Report backUP");
+		Reporter.log(">>>REPORT BACKUP<<<");
+//		test.log(Status.INFO,">>>REPORT BACKUP<<<");
 		report.flush();
 		
 	}
 
 	public void onTestStart(ITestResult result) {
-		System.out.println("===== =====>"+result.getMethod().getMethodName()+">===START======");
-		 test = report.createTest(result.getMethod().getMethodName());
+
+		Reporter.log(">>>"+result.getMethod().getMethodName()+" START<<<",true);
+		test = report.createTest(result.getMethod().getMethodName());
 		 UtilityClassObject.setTest(test);
-		 test.log(Status.INFO, result.getMethod().getMethodName()+"==> STARTED <====");
+		 test.log(Status.INFO,">>>"+ result.getMethod().getMethodName()+" STARTED<<<");
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		System.out.println("===== =====>"+result.getMethod().getMethodName()+">=====END======");
-		 test.log(Status.PASS, result.getMethod().getMethodName()+"==> COMPLETED <====");
+		Reporter.log(">>>"+result.getMethod().getMethodName()+" END<<<",true);
+		 test.log(Status.PASS,">>>"+ result.getMethod().getMethodName()+" COMPLETED<<<");
 
 	}
 
@@ -72,7 +76,8 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 		
 	    String time = 	new Date().toString().replace(" ", "_").replace(":", "_");
 		test.addScreenCaptureFromBase64String(filePath, testNAme+"_"+time);
-		 test.log(Status.FAIL, result.getMethod().getMethodName()+"==> FAILED <====");
+		Reporter.log(">>>"+result.getMethod().getMethodName()+" FAILED<<<",true);
+		 test.log(Status.FAIL,">>>"+ result.getMethod().getMethodName()+" FAILED<<<");
 
 	}
 

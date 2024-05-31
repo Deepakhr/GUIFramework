@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.comcast.crm.contacttest.CreateContactTest">
+      <class name="com.hsbc.bfsi.internetBanking.registerInternetBankingTest">
         <methods>
-          <include name="createConTactTest"/>
-          <include name="createContactWithOrgTest"/>
+          <include name="registerTest"/>
           <include name="configBM"/>
-          <include name="createContactWithsupportDateTest"/>
           <include name="configAM"/>
-          <include name="configBS"/>
           <include name="configBC"/>
-          <include name="configAS"/>
+          <include name="configBS"/>
           <include name="configAC"/>
+          <include name="configAS"/>
         </methods>
-      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
+      </class> <!-- com.hsbc.bfsi.internetBanking.registerInternetBankingTest -->
+      <class name="com.hsbc.bfsi.applyDebitCard.applyDebitCardTest">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="applyDebitTest"/>
+        </methods>
+      </class> <!-- com.hsbc.bfsi.applyDebitCard.applyDebitCardTest -->
+      <class name="com.hsbc.bfsi.openAccount.openAccountTest">
+        <methods>
+          <include name="configBM"/>
+          <include name="configAM"/>
+          <include name="staffLoginTest"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="creditCustomerTest"/>
+        </methods>
+      </class> <!-- com.hsbc.bfsi.openAccount.openAccountTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

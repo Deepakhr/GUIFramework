@@ -38,8 +38,10 @@ public class WebDriverUtility {
 	 */
 	public void waitForElementPresent(WebDriver driver , WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.visibilityOf(element));
-		
+		wait.until(ExpectedConditions.visibilityOf(element));	
+	}
+	public void maximize(WebDriver driver) {
+		driver.manage().window().maximize();
 	}
 	
 	/**
@@ -151,6 +153,11 @@ public class WebDriverUtility {
 	public void switchtoAlertAndAccept(WebDriver driver) {
 		driver.switchTo().alert().accept();
 	} 
+	
+	public String switchtoAlertAndGetData(WebDriver driver) {
+		String data = driver.switchTo().alert().getText();
+		return data;
+	}
 
 	/**
 	 *   switch to Alert Window and cancel
@@ -213,13 +220,11 @@ public class WebDriverUtility {
 	 * mouse movement on the element based on x and y location
 	 * @param driver
 	 * @param element
-	 * @param xLoaction
-	 * @param Yloaction
 	 */
-	public void mousemoveOnElement(WebDriver driver , WebElement element,int xLoaction , int Yloaction) {
-		Actions act = new Actions(driver);
-		act.moveToElement(element, xLoaction, Yloaction).perform();
-	}
+//	public void mousemoveOnElement(WebDriver driver , WebElement element) {
+//		Actions act = new Actions(driver);
+//		act.moveToElement(element, xLoaction, Yloaction).perform();
+//	}
 	
 	
 	/**
