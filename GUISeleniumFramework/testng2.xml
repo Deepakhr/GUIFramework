@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.hsbc.bfsi.openAccount.openAccountTest" />
+			<class name="com.hsbc.bfsi.openAccount.searchCustomerTest" />
+			<class name="com.hsbc.bfsi.applyDebitCard.applyDebitCardTest" />
+			<class name="com.hsbc.bfsi.internetBanking.registerInternetBankingTest" />
+			<class name="com.hsbc.bfsi.internetBanking.loginInternetBankingTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

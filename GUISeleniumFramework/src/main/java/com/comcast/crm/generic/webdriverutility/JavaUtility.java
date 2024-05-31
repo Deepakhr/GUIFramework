@@ -44,5 +44,17 @@ public class JavaUtility {
 	   String reqDate=  sim.format(cal.getTime());
 	return reqDate;
 	}
+	
+	public String getDigitFromText(String text) {
+		String digit = "";
+		for(int i=0; i<text.length(); i++)
+		{
+			if(Character.isDigit(text.charAt(i)))
+			{
+				digit = digit+text.charAt(i);
+			}
+		}
+		return digit;
+	}
 
 }
