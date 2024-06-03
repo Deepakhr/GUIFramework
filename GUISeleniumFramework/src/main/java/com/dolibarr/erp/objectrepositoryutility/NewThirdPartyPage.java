@@ -21,12 +21,20 @@ public class NewThirdPartyPage
 	@FindBy(id="select2-customerprospect-container")
 	private WebElement SelectCustomerProspect;
 	
+	@FindBy(xpath="//li[text()='Customer']")
+	private WebElement selectCustomer;
+	
 	@FindBy(id="town")
 	private WebElement CityTextField;
 	
 	@FindBy(name="save")
 	private WebElement CreateThirdPartyButton;
 	
+	
+	public WebElement getSelectCustomer() {
+		return selectCustomer;
+	}
+
 	public WebElement getThirdPartyNameTextField() {
 		return ThirdPartyNameTextField;
 	}
@@ -57,7 +65,7 @@ public class NewThirdPartyPage
 	
 	public void selectCustomer()
 	{
-		Select cs= new Select(SelectCustomerProspect);
+		Select cs= new Select(getSelectCustomerProspect());
 		cs.selectByVisibleText("Customer");
 	}
 	
