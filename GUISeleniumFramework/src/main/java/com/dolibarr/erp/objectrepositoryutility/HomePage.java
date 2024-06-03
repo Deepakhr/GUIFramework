@@ -17,7 +17,7 @@ import com.dolibarr.erp.generic.webdriverutility.WebDriverUtility;
 public class HomePage extends WebDriverUtility {
 	WebDriverUtility Wlib = new WebDriverUtility();
 	WebDriver driver;
-<<<<<<< HEAD
+
 	 public HomePage(WebDriver driver) {            
 		 this.driver = driver;
 		 PageFactory.initElements(driver, this);
@@ -26,18 +26,6 @@ public class HomePage extends WebDriverUtility {
 	 private WebElement logoutMenu;
 	 @FindBy(xpath="//span[text()='Logout']")
 	 private WebElement logOut;
-	
-=======
-
-	public HomePage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
-
-	@FindBy(xpath = "//div[@id='topmenu-login-dropdown']")
-	private WebElement logoutMenu;
-	@FindBy(xpath = "//span[text()='Logout']")
-	private WebElement logOut;
 	@FindBy(id = "mainmenua_companies")
 	private WebElement thirdPartiesMenu;
 
@@ -45,7 +33,6 @@ public class HomePage extends WebDriverUtility {
 		return thirdPartiesMenu;
 	}
 
->>>>>>> branch 'Testing' of https://github.com/AnushaDudekula/Dolibarr_GUIFramework-.git
 	public WebElement getLogoutMenu() {
 		return logoutMenu;
 	}
@@ -54,9 +41,6 @@ public class HomePage extends WebDriverUtility {
 		return logOut;
 	}
 	
-
-
-
 	public void logout() {
 		Wlib.mousemoveOnElement(driver, logoutMenu);
 		getLogoutMenu().click();
