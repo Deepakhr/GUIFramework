@@ -16,10 +16,10 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
  * Contains Login page elements & business lib like login()
  *
  */  
-public class Home extends WebDriverUtility{                             
+public class HomePage extends WebDriverUtility{                             
                            
 	WebDriver driver;
-	 public Home(WebDriver driver) {            
+	 public HomePage(WebDriver driver) {            
 		 this.driver = driver;
 		 PageFactory.initElements(driver, this);
 	 }
@@ -27,6 +27,14 @@ public class Home extends WebDriverUtility{
 		
 	}
 
+	@FindBy (id="mainmenua_companies")
+	private WebElement ThirdPartiesLink;
+	
+	public WebElement getThirdPartiesLink() 
+	{
+		return ThirdPartiesLink;
+	}
+	
 	
 
 	
