@@ -18,15 +18,14 @@ public class HomePage extends WebDriverUtility {
 	WebDriverUtility Wlib = new WebDriverUtility();
 	WebDriver driver;
 
-	public HomePage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
-
-	@FindBy(xpath = "//div[@id='topmenu-login-dropdown']")
-	private WebElement logoutMenu;
-	@FindBy(xpath = "//span[text()='Logout']")
-	private WebElement logOut;
+	 public HomePage(WebDriver driver) {            
+		 this.driver = driver;
+		 PageFactory.initElements(driver, this);
+	 }
+	 @FindBy(xpath="//div[@id='topmenu-login-dropdown']")
+	 private WebElement logoutMenu;
+	 @FindBy(xpath="//span[text()='Logout']")
+	 private WebElement logOut;
 	@FindBy(id = "mainmenua_companies")
 	private WebElement thirdPartiesMenu;
 
@@ -41,7 +40,7 @@ public class HomePage extends WebDriverUtility {
 	public WebElement getLogOut() {
 		return logOut;
 	}
-
+	
 	public void logout() {
 		Wlib.mousemoveOnElement(driver, logoutMenu);
 		getLogoutMenu().click();
