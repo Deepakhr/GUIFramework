@@ -34,11 +34,18 @@ public class NewThirdPartyPage
 		return CreateThirdPartyButton;
 	}
 
-	public void createCustomer()
+	public void createCustomer(String CName, String CityName)
 	{
-		getThirdPartyNameTextField().sendKeys();
-		getCityTextField().sendKeys();
+		getThirdPartyNameTextField().sendKeys(CName);
+		getCityTextField().sendKeys(CityName);
 	}
+	
+	public void createProspect(String PName, String CityName)
+	{
+		getThirdPartyNameTextField().sendKeys(PName);
+		getCityTextField().sendKeys(CityName);
+	}
+	
 	public void selectCustomer()
 	{
 		Select cs= new Select(SelectCustomerProspect);
