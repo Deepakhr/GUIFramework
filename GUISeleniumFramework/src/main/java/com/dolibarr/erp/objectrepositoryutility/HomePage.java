@@ -11,21 +11,29 @@ import com.dolibarr.erp.generic.webdriverutility.WebDriverUtility;
  * 
  * @author Deepak
  * 
- * Contains Login page elements & business lib like login()
+ *         Contains Login page elements & business lib like login()
  *
- */  
-public class HomePage extends WebDriverUtility{                             
-	WebDriverUtility Wlib=new WebDriverUtility();              
+ */
+public class HomePage extends WebDriverUtility {
+	WebDriverUtility Wlib = new WebDriverUtility();
 	WebDriver driver;
-	 public HomePage(WebDriver driver) {            
-		 this.driver = driver;
-		 PageFactory.initElements(driver, this);
-	 }
-	 @FindBy(xpath="//div[@id='topmenu-login-dropdown']")
-	 private WebElement logoutMenu;
-	 @FindBy(xpath="//span[text()='Logout']")
-	 private WebElement logOut;
-	 
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = "//div[@id='topmenu-login-dropdown']")
+	private WebElement logoutMenu;
+	@FindBy(xpath = "//span[text()='Logout']")
+	private WebElement logOut;
+	@FindBy(id = "mainmenua_companies")
+	private WebElement thirdPartiesMenu;
+
+	public WebElement getThirdPartiesMenu() {
+		return thirdPartiesMenu;
+	}
+
 	public WebElement getLogoutMenu() {
 		return logoutMenu;
 	}
@@ -35,14 +43,13 @@ public class HomePage extends WebDriverUtility{
 	}
 
 	public void logout() {
-		Wlib.mousemoveOnElement(driver,logoutMenu);
+		Wlib.mousemoveOnElement(driver, logoutMenu);
 		getLogoutMenu().click();
 		getLogOut().click();
-		
+	}
+	
+	public void clickOnThirdPartiesMenu() {
+		getThirdPartiesMenu().click();
 	}
 
-	
-
-	
-	
 }
