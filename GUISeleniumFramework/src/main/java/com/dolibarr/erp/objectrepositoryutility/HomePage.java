@@ -25,13 +25,19 @@ public class HomePage extends WebDriverUtility{
 	 private WebElement logoutMenu;
 	 @FindBy(xpath="//span[text()='Logout']")
 	 private WebElement logOut;
-	 
+	 @FindBy(xpath="//span[text()='Third-parties']")
+	 private WebElement thirdParties;
 	public WebElement getLogoutMenu() {
 		return logoutMenu;
 	}
 
 	public WebElement getLogOut() {
 		return logOut;
+	}
+	
+
+	public WebElement getThirdParties() {
+		return thirdParties;
 	}
 
 	public void logout() {
