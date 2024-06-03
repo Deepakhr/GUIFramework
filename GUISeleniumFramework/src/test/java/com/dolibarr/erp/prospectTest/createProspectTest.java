@@ -30,7 +30,6 @@ public class createProspectTest extends BaseClass {
 		String statusmsg1=eLib.getDataFromExcel("ThirdParty",4,3);
 		String discription=eLib.getDataFromExcel("ThirdParty",4,3);
 		String Nprice=eLib.getDataFromExcel("ThirdParty",4,3);
-		String PwithTax=eLib.getDataFromExcel("ThirdParty",4,3);
 		String qty=eLib.getDataFromExcel("ThirdParty",4,3);
 		String dis=eLib.getDataFromExcel("ThirdParty",4,3);
 		

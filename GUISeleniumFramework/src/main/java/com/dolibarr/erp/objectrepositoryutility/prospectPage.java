@@ -12,9 +12,12 @@ public class prospectPage {
 
 	@FindBy(linkText="Create proposal")
 	private WebElement createProposal;
-
+	@FindBy(linkText="Create contract")
+	private WebElement createcontract;
 	public WebElement getCreateProposal() {
 		return createProposal;
 	}
-	
+	public WebElement getCreateContract() {
+		return createcontract;
+	}
 }
