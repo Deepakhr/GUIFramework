@@ -3,12 +3,17 @@ package com.dolibarr.erp.prospectTest;
  * @author anusha
  */
 
+import static org.testng.Assert.assertEquals;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
+import com.dolibarr.erp.objectrepositoryutility.CommercialPageInfoPage;
 import com.dolibarr.erp.objectrepositoryutility.HomePage;
 import com.dolibarr.erp.objectrepositoryutility.NewThirdPartyPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
+import com.dolibarr.erp.objectrepositoryutility.newCommercialProposalPage;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTest;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
 /**
@@ -19,6 +24,15 @@ public class createProspectTest extends BaseClass {
 	public void createProspect() throws Throwable {
 		String PName=eLib.getDataFromExcel("ThirdParty", 4, 2)+jLib.getRandomNumber();
 		String city=eLib.getDataFromExcel("ThirdParty", 4, 3);
+		String refcus=eLib.getDataFromExcel("ThirdParty",4,3);
+		String date=jLib.getRequriedDateYYYYDDMM(15);
+		String msg=eLib.getDataFromExcel("ThirdParty",4,3);
+		String discription=eLib.getDataFromExcel("ThirdParty",4,3);
+		String Nprice=eLib.getDataFromExcel("ThirdParty",4,3);
+		String PwithTax=eLib.getDataFromExcel("ThirdParty",4,3);
+		String qty=eLib.getDataFromExcel("ThirdParty",4,3);
+		String dis=eLib.getDataFromExcel("ThirdParty",4,3);
+		
 		HomePage h=new HomePage(driver);
 		h.getThirdPartiesMenu().click();
 		Third_PartiesPage t=new Third_PartiesPage(driver);
@@ -36,7 +50,12 @@ public class createProspectTest extends BaseClass {
 		pi.getProspectInfo().click();
 		prospectPage pp=new prospectPage(driver);
 		pp.getCreateProposal().click();
-		
+		newCommercialProposalPage ncpp=new newCommercialProposalPage(driver);
+		ncpp.createProposal(refcus, date);
+		CommercialPageInfoPage cpip =new CommercialPageInfoPage(driver);
+		String actmsg=cpip.getStatus().getText();
+		Assert.assertEquals(actmsg,msg);
+		cpip.addLine(discription, Nprice, qty, dis); 
 	}
 
 	

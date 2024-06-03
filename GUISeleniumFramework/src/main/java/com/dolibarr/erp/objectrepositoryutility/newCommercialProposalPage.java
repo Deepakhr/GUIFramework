@@ -16,15 +16,25 @@ public class newCommercialProposalPage {
 	@FindBy(xpath="//input[@id='re']")
 	private WebElement dateOfProposal;
 	@FindBy(name="save")
-	private WebElement save;
+	private WebElement savedraft;
 	public WebElement getRefCustomer() {
 		return refCustomer;
 	}
 	public WebElement getDateOfProposal() {
 		return dateOfProposal;
 	}
-	public WebElement getSave() {
-		return save;
-	}
 	
+	public WebElement getSavedraft() {
+		return savedraft;
+	}
+
+	
+	public void createProposal(String refcus,String date) {
+		getRefCustomer().sendKeys(refcus);
+		getDateOfProposal().clear();
+		getDateOfProposal().sendKeys(date);
+		getSavedraft().click();
+		
+		
+	}
 }
