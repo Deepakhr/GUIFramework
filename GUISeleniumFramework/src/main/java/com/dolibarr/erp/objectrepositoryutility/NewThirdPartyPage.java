@@ -1,12 +1,16 @@
 package com.dolibarr.erp.objectrepositoryutility;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class NewThirdPartyPage
 {
-	
+	public NewThirdPartyPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
 	@FindBy (id="name")
 	private WebElement ThirdPartyNameTextField;
 	
@@ -18,6 +22,8 @@ public class NewThirdPartyPage
 	
 	@FindBy(name="save")
 	private WebElement CreateThirdPartyButton;
+	@FindBy(xpath="//li[text()='Prospect']")
+	private WebElement prospect;
 	
 	public WebElement getThirdPartyNameTextField() {
 		return ThirdPartyNameTextField;
@@ -35,21 +41,8 @@ public class NewThirdPartyPage
 		return CreateThirdPartyButton;
 	}
 
-	public void createCustomer()
-	{
-		getThirdPartyNameTextField().sendKeys();
-		getCityTextField().sendKeys();
-	}
-	public void selectCustomer()
-	{
-		Select cs= new Select(SelectCustomerProspect);
-		cs.selectByVisibleText("Customer");
-	}
-	
-	public void selectProspect()
-	{
-		Select cs= new Select(SelectCustomerProspect);
-		cs.selectByVisibleText("Prospect");
+	public WebElement getProspect() {
+		return prospect;
 	}
 	
 
