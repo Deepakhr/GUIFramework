@@ -14,7 +14,8 @@ public class createProspectTest extends BaseClass {
 	@Test
 	public void createProspect() {
 		HomePage h=new HomePage(driver);
-		h.
+		h.getThirdParties().click();
+		
 	}
 
 }
