@@ -1,13 +1,11 @@
-package com.comcast.crm.objectrepositoryutility;
-
-import java.time.Duration;
+package com.dolibarr.erp.objectrepositoryutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
+import com.dolibarr.erp.generic.webdriverutility.WebDriverUtility;
 
 /**
  * 
@@ -24,13 +22,13 @@ public class LoginPage extends WebDriverUtility{                              //
 		 PageFactory.initElements(driver, this);
 	 }
 	                           
-	@FindBy(name="user_name")                        // Rule-2 Object Creation
+	@FindBy(id="username")                        // Rule-2 Object Creation
 	private WebElement usernameEdt;
 	
-	@FindBy(name="user_password")
+	@FindBy(id="password")
 	private WebElement passwordEdt;
 	
-	@FindBy(id = "submitButton")
+	@FindBy(xpath= "//input[@type='submit']")
 	private WebElement loginBtn;
 	     
 	

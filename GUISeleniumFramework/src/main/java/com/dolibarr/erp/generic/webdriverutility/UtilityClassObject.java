@@ -1,4 +1,4 @@
-package com.comcast.crm.generic.webdriverutility;
+package com.dolibarr.erp.generic.webdriverutility;
 
 import org.openqa.selenium.WebDriver;
 

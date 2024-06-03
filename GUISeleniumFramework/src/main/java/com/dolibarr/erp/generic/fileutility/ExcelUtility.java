@@ -1,4 +1,4 @@
-package com.comcast.crm.generic.fileutility;
+package com.dolibarr.erp.generic.fileutility;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
