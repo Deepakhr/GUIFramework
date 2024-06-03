@@ -22,7 +22,7 @@ import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
-import com.comcast.crm.objectrepositoryutility.Home;
+import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -94,7 +94,7 @@ public class BaseClass {
 		@AfterMethod(groups = {"smokeTest", "regressionTest"})
 		public void configAM() {
 			System.out.println("=logout=");
-			Home hp = new Home(driver);
+			HomePage hp = new HomePage(driver);
 			hp.logout();
 		}
 		

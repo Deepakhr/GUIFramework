@@ -16,10 +16,10 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
  * Contains Login page elements & business lib like login()
  *
  */  
-public class Home extends WebDriverUtility{                             
+public class HomePage extends WebDriverUtility{                             
 	WebDriverUtility Wlib=new WebDriverUtility();              
 	WebDriver driver;
-	 public Home(WebDriver driver) {            
+	 public HomePage(WebDriver driver) {            
 		 this.driver = driver;
 		 PageFactory.initElements(driver, this);
 	 }
