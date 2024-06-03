@@ -42,6 +42,11 @@ public class WebDriverUtility {
 		
 	}
 	
+	
+	public void maximize(WebDriver driver) {
+		driver.manage().window().maximize();
+	}
+	
 	/**
 	 * wait for element until element to be active and click 
 	 * @param driver

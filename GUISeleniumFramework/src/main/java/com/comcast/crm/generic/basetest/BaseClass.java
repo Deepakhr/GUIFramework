@@ -21,6 +21,7 @@ import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
+import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.Home;
 import com.comcast.crm.objectrepositoryutility.LoginPage;
 
@@ -32,6 +33,7 @@ public class BaseClass {
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	public JavaUtility jLib = new JavaUtility();
+	public WebDriverUtility wlib=new WebDriverUtility();
 	public  WebDriver driver = null;
 	public  static WebDriver sdriver = null;
 
@@ -72,6 +74,8 @@ public class BaseClass {
 			ChromeOptions chromeOptions = new ChromeOptions();
 			driver = new ChromeDriver(chromeOptions);
 		}
+		wlib.maximize(driver);
+		wlib.waitForPageToLoad(driver);
 		sdriver = driver;
 		UtilityClassObject.setDriver(driver);
 	    }
@@ -81,7 +85,7 @@ public class BaseClass {
 			System.out.println("=login=");
 			String URL = System.getProperty("url" ,fLib.getDataFromPropertiesFile("url") );
 			String USERNAME = System.getProperty("username" , fLib.getDataFromPropertiesFile("username"));
-			String PASSWORD = System.getProperty("password" , fLib.getDataFromPropertiesFile("password"));
+			String PASSWORD = System.getProperty("password" , fLib.getDataFromPropertiesFile("pwd"));
 			LoginPage lp = new LoginPage(driver);
 			lp.loginToapp(URL, USERNAME, PASSWORD);
 		}

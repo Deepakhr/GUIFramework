@@ -17,13 +17,29 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
  *
  */  
 public class Home extends WebDriverUtility{                             
-                           
+	WebDriverUtility Wlib=new WebDriverUtility();              
 	WebDriver driver;
 	 public Home(WebDriver driver) {            
 		 this.driver = driver;
 		 PageFactory.initElements(driver, this);
 	 }
+	 @FindBy(xpath="//div[@id='topmenu-login-dropdown']")
+	 private WebElement logoutMenu;
+	 @FindBy(xpath="//span[text()='Logout']")
+	 private WebElement logOut;
+	 
+	public WebElement getLogoutMenu() {
+		return logoutMenu;
+	}
+
+	public WebElement getLogOut() {
+		return logOut;
+	}
+
 	public void logout() {
+		Wlib.mousemoveOnElement(driver,logoutMenu);
+		getLogoutMenu().click();
+		getLogOut().click();
 		
 	}
 
