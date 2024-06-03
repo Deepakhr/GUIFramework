@@ -32,6 +32,8 @@ private WebElement add;
 private WebElement validate;
 @FindBy(xpath="//button[text()='Yes']")
 private WebElement yesButton;
+@FindBy(xpath="//span[starts-with(@title,'Validated')]")
+private WebElement validateafter;
 public WebElement getStatus() {
 	return status;
 }
@@ -62,6 +64,10 @@ public WebElement getAdd() {
 
 public WebElement getValidate() {
 	return validate;
+}
+
+public WebElement getValidateafter() {
+	return validateafter;
 }
 public void addLine(String discription,String Nprice,String qty,String dis) {
 	getFreeTextItem().click();

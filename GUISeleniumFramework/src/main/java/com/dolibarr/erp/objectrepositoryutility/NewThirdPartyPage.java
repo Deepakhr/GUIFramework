@@ -25,6 +25,7 @@ public class NewThirdPartyPage
 	
 	@FindBy(name="save")
 	private WebElement CreateThirdPartyButton;
+	
 	@FindBy(xpath="//li[text()='Prospect']")
 	private WebElement prospect;
 	
@@ -48,11 +49,11 @@ public class NewThirdPartyPage
 	public WebElement getCreateThirdPartyButton() {
 		return CreateThirdPartyButton;
 	}
-
-<<<<<<< HEAD
+	
 	public WebElement getProspect() {
 		return prospect;
-=======
+	}
+
 	public void createCustomer(String CName, String CityName)
 	{
 		getThirdPartyNameTextField().sendKeys(CName);
@@ -64,19 +65,6 @@ public class NewThirdPartyPage
 		getThirdPartyNameTextField().sendKeys(PName);
 		getCityTextField().sendKeys(CityName);
 	}
-	
-	public void selectCustomer()
-	{
-		Select cs= new Select(getSelectCustomerProspect());
-		cs.selectByVisibleText("Customer");
-	}
-	
-	public void selectProspect()
-	{
-		Select cs= new Select(SelectCustomerProspect);
-		cs.selectByVisibleText("Prospect");
->>>>>>> branch 'Testing' of https://github.com/AnushaDudekula/Dolibarr_GUIFramework-.git
-	}
-	
+
 
 }

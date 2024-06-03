@@ -26,7 +26,8 @@ public class createProspectTest extends BaseClass {
 		String city=eLib.getDataFromExcel("ThirdParty", 4, 3);
 		String refcus=eLib.getDataFromExcel("ThirdParty",4,3);
 		String date=jLib.getRequriedDateYYYYDDMM(15);
-		String msg=eLib.getDataFromExcel("ThirdParty",4,3);
+		String statusmsg=eLib.getDataFromExcel("ThirdParty",4,3);
+		String statusmsg1=eLib.getDataFromExcel("ThirdParty",4,3);
 		String discription=eLib.getDataFromExcel("ThirdParty",4,3);
 		String Nprice=eLib.getDataFromExcel("ThirdParty",4,3);
 		String PwithTax=eLib.getDataFromExcel("ThirdParty",4,3);
@@ -54,8 +55,10 @@ public class createProspectTest extends BaseClass {
 		ncpp.createProposal(refcus, date);
 		CommercialPageInfoPage cpip =new CommercialPageInfoPage(driver);
 		String actmsg=cpip.getStatus().getText();
-		Assert.assertEquals(actmsg,msg);
+		Assert.assertEquals(actmsg,statusmsg);
 		cpip.addLine(discription, Nprice, qty, dis); 
+		String actMsg1=cpip.getValidateafter().getText();
+		Assert.assertEquals(actMsg1,statusmsg1);
 	}
 
 	
