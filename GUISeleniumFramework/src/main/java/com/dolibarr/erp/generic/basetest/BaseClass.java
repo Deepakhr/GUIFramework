@@ -1,4 +1,4 @@
-package com.comcast.crm.generic.basetest;
+package com.dolibarr.erp.generic.basetest;
 
 import java.sql.SQLException;
 
@@ -16,14 +16,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import com.comcast.crm.generic.databaseutlity.DataBaseUtility;
-import com.comcast.crm.generic.fileutility.ExcelUtility;
-import com.comcast.crm.generic.fileutility.FileUtility;
-import com.comcast.crm.generic.webdriverutility.JavaUtility;
-import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
-import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
-import com.comcast.crm.objectrepositoryutility.HomePage;
-import com.comcast.crm.objectrepositoryutility.LoginPage;
+import com.dolibarr.erp.generic.databaseutlity.DataBaseUtility;
+import com.dolibarr.erp.generic.fileutility.ExcelUtility;
+import com.dolibarr.erp.generic.fileutility.FileUtility;
+import com.dolibarr.erp.generic.webdriverutility.JavaUtility;
+import com.dolibarr.erp.generic.webdriverutility.UtilityClassObject;
+import com.dolibarr.erp.generic.webdriverutility.WebDriverUtility;
+import com.dolibarr.erp.objectrepositoryutility.HomePage;
+import com.dolibarr.erp.objectrepositoryutility.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 

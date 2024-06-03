@@ -1,4 +1,4 @@
-package com.comcast.crm.generic.webdriverutility;
+package com.dolibarr.erp.generic.webdriverutility;
 
 import java.io.File;
 import java.io.IOException;
