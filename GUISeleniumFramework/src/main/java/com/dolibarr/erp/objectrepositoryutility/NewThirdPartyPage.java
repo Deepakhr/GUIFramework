@@ -8,7 +8,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class NewThirdPartyPage
 {
-	
+	WebDriver driver;
+	public NewThirdPartyPage(WebDriver driver) 
+	{
+		this.driver= driver;
+		PageFactory.initElements(driver, this); 
+	}
 	@FindBy (id="name")
 	private WebElement ThirdPartyNameTextField;
 	
