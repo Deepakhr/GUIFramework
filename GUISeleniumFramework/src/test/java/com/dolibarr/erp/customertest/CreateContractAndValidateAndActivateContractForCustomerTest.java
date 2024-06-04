@@ -6,11 +6,12 @@ package com.dolibarr.erp.customertest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
+import com.dolibarr.erp.objectrepositoryutility.CustomerInfoPage;
 import com.dolibarr.erp.objectrepositoryutility.HomePage;
+import com.dolibarr.erp.objectrepositoryutility.ListOfCustomerPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
 
 public class CreateContractAndValidateAndActivateContractForCustomerTest extends BaseClass {
@@ -33,8 +34,12 @@ public class CreateContractAndValidateAndActivateContractForCustomerTest extends
          */
         Third_PartiesPage tpp = new Third_PartiesPage(driver);
         tpp.getListOfCustomersLink().click();
-        WebElement searchTextField = driver.findElement(By.xpath("//input[@name='search_nom']"));
-        searchTextField.sendKeys(CName,Keys.ENTER);
+        ListOfCustomerPage lcp= new ListOfCustomerPage(driver);
+        lcp.getSearchCust().sendKeys(CName,Keys.ENTER);
+        driver.findElement(By.xpath("//a[text()='"+ CName +"']")).click();
+        CustomerInfoPage cip= new CustomerInfoPage(driver);
+        cip.getCustomerLink().click();
+        
       
         
 		

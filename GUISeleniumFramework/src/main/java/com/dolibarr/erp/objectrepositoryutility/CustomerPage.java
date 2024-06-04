@@ -15,13 +15,13 @@ public class CustomerPage
 		PageFactory.initElements(driver, this); 
 	}
 	
-	@FindBy (linkText= "Create proposal")
+	@FindBy (xpath= "//a[text()='Create proposal']")
 	private WebElement CreateProposalLink;
 	
-	@FindBy (linkText= "Create order")
+	@FindBy ( xpath= "//a[text()='Create order']")
 	private WebElement CreateOrderLink;
 	
-	@FindBy (linkText= "Create contract")
+	@FindBy (xpath= "//a[text()='Create contract']")
 	private WebElement CreateContractLink;
 	public WebDriver getDriver() {
 		return driver;
