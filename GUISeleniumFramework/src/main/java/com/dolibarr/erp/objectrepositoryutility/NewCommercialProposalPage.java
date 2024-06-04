@@ -5,8 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class newCommercialProposalPage {
-	public newCommercialProposalPage(WebDriver driver) {
+public class NewCommercialProposalPage {
+	WebDriver driver;
+	public NewCommercialProposalPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
 
