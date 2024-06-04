@@ -5,6 +5,7 @@ package com.dolibarr.erp.prospectTest;
 
 import static org.testng.Assert.assertEquals;
 
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -12,9 +13,9 @@ import org.testng.annotations.Test;
 import com.dolibarr.erp.generic.basetest.BaseClass;
 import com.dolibarr.erp.objectrepositoryutility.CommercialPageInfoPage;
 import com.dolibarr.erp.objectrepositoryutility.HomePage;
+import com.dolibarr.erp.objectrepositoryutility.NewCommercialProposalPage;
 import com.dolibarr.erp.objectrepositoryutility.NewThirdPartyPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
-import com.dolibarr.erp.objectrepositoryutility.newCommercialProposalPage;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
 /**
@@ -68,7 +69,7 @@ public class createProspectTest extends BaseClass {
 		/**
 		 * navigating new proposal page
 		 */
-		newCommercialProposalPage ncpp=new newCommercialProposalPage(driver);
+		NewCommercialProposalPage ncpp=new NewCommercialProposalPage(driver);
 		ncpp.getRefCustomer().sendKeys(refcus);
 		ncpp.getSavedraft().click();
 		/**
