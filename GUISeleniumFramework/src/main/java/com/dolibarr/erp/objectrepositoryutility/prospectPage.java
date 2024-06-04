@@ -12,11 +12,14 @@ public class prospectPage {
 		PageFactory.initElements(driver,this);
 	}
 
-	@FindBy(linkText="Create proposal")
+	@FindBy(xpath="//a[text()='Create proposal']")
 	private WebElement createProposal;
-
+	@FindBy(xpath="//a[text()='Create contract']")
+	private WebElement createcontract;
 	public WebElement getCreateProposal() {
 		return createProposal;
 	}
-	
+	public WebElement getCreateContract() {
+		return createcontract;
+	}
 }
