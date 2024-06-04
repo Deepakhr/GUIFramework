@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class NewThirdPartyPage
 {
+	WebDriver driver;
 	public NewThirdPartyPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}

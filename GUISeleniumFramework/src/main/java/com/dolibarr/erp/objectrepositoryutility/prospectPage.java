@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class prospectPage {
+	
+	WebDriver driver;
 	public prospectPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
