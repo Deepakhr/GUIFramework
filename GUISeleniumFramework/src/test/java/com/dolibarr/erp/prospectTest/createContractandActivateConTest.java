@@ -9,7 +9,7 @@ import com.dolibarr.erp.objectrepositoryutility.HomePage;
 import com.dolibarr.erp.objectrepositoryutility.ListOfProspectPage;
 import com.dolibarr.erp.objectrepositoryutility.NewThirdPartyPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
-import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTest;
+import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
 
 public class createContractandActivateConTest extends BaseClass{
@@ -34,7 +34,7 @@ public void createContractandActivateConTest() throws Throwable  {
 	ListOfProspectPage lpp=new ListOfProspectPage(driver);
 	lpp.getSearch().sendKeys(PName,Keys.ENTER);
 	driver.findElement(By.xpath("//a[text()='"+PName+"'")).click();
-	prosepectInfoTest pi=new prosepectInfoTest(driver);
+	prosepectInfoTestPage pi=new prosepectInfoTestPage(driver);
 	pi.getProspectInfo().click();
 	prospectPage pp=new prospectPage(driver);
 	pp.getCreateContract().click();
