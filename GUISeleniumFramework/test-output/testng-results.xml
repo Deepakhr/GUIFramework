@@ -2,40 +2,79 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2024-06-04T11:21:00 IST" name="Default suite" finished-at="2024-06-04T11:21:29 IST" duration-ms="28830">
+=======
   <suite started-at="2024-06-04T11:19:14 IST" name="Default suite" finished-at="2024-06-04T11:19:43 IST" duration-ms="29156">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
     <groups>
     </groups>
+<<<<<<< HEAD
+    <test started-at="2024-06-04T11:21:00 IST" name="Default test" finished-at="2024-06-04T11:21:29 IST" duration-ms="28830">
+      <class name="com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:00 IST" name="configBS" finished-at="2024-06-04T11:21:00 IST" duration-ms="63" status="PASS">
+=======
     <test started-at="2024-06-04T11:19:14 IST" name="Default test" finished-at="2024-06-04T11:19:43 IST" duration-ms="29156">
       <class name="com.dolibarr.erp.prospectTest.createContractandActivateConTest">
         <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:14 IST" name="configBS" finished-at="2024-06-04T11:19:14 IST" duration-ms="21" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:00 IST" name="configBC" finished-at="2024-06-04T11:21:11 IST" duration-ms="10910" status="PASS">
+=======
         <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:14 IST" name="configBC" finished-at="2024-06-04T11:19:16 IST" duration-ms="1866" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:11 IST" name="configBM" finished-at="2024-06-04T11:21:15 IST" duration-ms="3558" status="PASS">
+=======
         <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:16 IST" name="configBM" finished-at="2024-06-04T11:19:21 IST" duration-ms="5427" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
+<<<<<<< HEAD
+        <test-method signature="createNewCustomer()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:15 IST" name="createNewCustomer" finished-at="2024-06-04T11:21:27 IST" duration-ms="12595" status="PASS">
+=======
         <test-method signature="createContractandActivateConTest()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:21 IST" name="createContractandActivateConTest" finished-at="2024-06-04T11:19:41 IST" duration-ms="19927" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- createNewCustomer -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:27 IST" name="configAM" finished-at="2024-06-04T11:21:29 IST" duration-ms="1047" status="PASS">
+=======
         </test-method> <!-- createContractandActivateConTest -->
         <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:41 IST" name="configAM" finished-at="2024-06-04T11:19:42 IST" duration-ms="732" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:29 IST" name="configAC" finished-at="2024-06-04T11:21:29 IST" duration-ms="581" status="PASS">
+=======
         <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:42 IST" name="configAC" finished-at="2024-06-04T11:19:43 IST" duration-ms="1156" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest@41a2befb]" started-at="2024-06-04T11:21:29 IST" name="configAS" finished-at="2024-06-04T11:21:29 IST" duration-ms="0" status="PASS">
+=======
         <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.createContractandActivateConTest@c430e6c]" started-at="2024-06-04T11:19:43 IST" name="configAS" finished-at="2024-06-04T11:19:43 IST" duration-ms="0" status="PASS">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
+<<<<<<< HEAD
+      </class> <!-- com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest -->
+=======
       </class> <!-- com.dolibarr.erp.prospectTest.createContractandActivateConTest -->
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
