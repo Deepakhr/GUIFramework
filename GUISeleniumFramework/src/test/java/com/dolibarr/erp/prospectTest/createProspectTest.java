@@ -5,30 +5,24 @@ package com.dolibarr.erp.prospectTest;
  */
 
 import static org.testng.Assert.assertEquals;
-
-
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-
 import com.dolibarr.erp.generic.basetest.BaseClass;
 import com.dolibarr.erp.objectrepositoryutility.CommercialInfoPage;
-
+import com.dolibarr.erp.objectrepositoryutility.CommercialPageInfoPage;
 import com.dolibarr.erp.objectrepositoryutility.HomePage;
 import com.dolibarr.erp.objectrepositoryutility.NewCommercialProposalPage;
 import com.dolibarr.erp.objectrepositoryutility.NewThirdPartyPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
-
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTest;
-
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
-
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
 
-/**
- * This method used to create prospect
- */
 public class createProspectTest extends BaseClass {
+	/**
+	 * This method used to create prospect and proposal and validate
+	 */
 	@Test
 	public void createProspect() throws Throwable{
 		/**
@@ -48,41 +42,31 @@ public class createProspectTest extends BaseClass {
 		 * navigating HomePage
 		 */
 		HomePage h=new HomePage(driver);
-
 		h.getThirdPartiesMenu().click();
-
-
 		/**
 		 * navigating thirdparties page
 		 */
 		Third_PartiesPage t=new Third_PartiesPage(driver);
-
 		t.getNewProspectLink().click();
-
-		NewThirdPartyPage ntp = new NewThirdPartyPage(driver);
-
 		/**
 		 * creating new thirdparty
 		 */
+		NewThirdPartyPage ntp = new NewThirdPartyPage(driver);
 		ntp.getThirdPartyNameTextField().sendKeys(PName);
 		ntp.getSelectCustomerProspect().click();
 		ntp.getProspect().click();
 		ntp.getCityTextField().sendKeys(city);
 		ntp.getCreateThirdPartyButton().click();
-
-		prosepectInfoTest pi = new prosepectInfoTest(driver);
-
 		/**
 		 * navigating prospect info page
 		 */
 		prosepectInfoTestPage pi=new prosepectInfoTestPage(driver);
 		pi.getProspectInfo().click();
-		prospectPage pp = new prospectPage(driver);
-
 		/**
 		 * creating proposal
 		 */
 		prospectPage pp=new prospectPage(driver);
+		pp.getCreateProposal().click();
 		/**
 		 * navigating new proposal page
 		 */
@@ -93,12 +77,14 @@ public class createProspectTest extends BaseClass {
 		/**
 		 * validating status before Validate
 		 */
+		CommercialPageInfoPage cpip=new CommercialPageInfoPage(driver);
 		String actmsg=cpip.getStatus().getText();
 		Assert.assertEquals(actmsg,statusmsg);
 		Reporter.log(actmsg+"status is verified",true);
 		/**
 		 * passing the datails of the product
 		 */
+		
 		cpip.addLine(discription, Nprice, qty, dis);
 		cpip.getValidate().click();
 		cpip.getYesButton().click();
