@@ -7,7 +7,6 @@ package com.dolibarr.erp.customertest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
