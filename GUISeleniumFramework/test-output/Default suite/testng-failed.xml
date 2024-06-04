@@ -3,17 +3,26 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="com.dolibarr.erp.customertest.CreateContractAndValidateAndActivateContractForCustomerTest">
+=======
       <class name="com.dolibarr.erp.prospectTest.createOrderTest">
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
         <methods>
           <include name="createOrder"/>
           <include name="configBC"/>
           <include name="configBS"/>
           <include name="configAC"/>
           <include name="configAS"/>
+          <include name="createContract"/>
           <include name="configBM"/>
           <include name="configAM"/>
         </methods>
+<<<<<<< HEAD
+      </class> <!-- com.dolibarr.erp.customertest.CreateContractAndValidateAndActivateContractForCustomerTest -->
+=======
       </class> <!-- com.dolibarr.erp.prospectTest.createOrderTest -->
+>>>>>>> branch 'Testing' of https://github.com/rekha-91/Dolibarr_GUIFramework.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

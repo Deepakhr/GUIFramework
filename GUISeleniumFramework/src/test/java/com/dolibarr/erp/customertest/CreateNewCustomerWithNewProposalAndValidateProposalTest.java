@@ -67,7 +67,7 @@ public class CreateNewCustomerWithNewProposalAndValidateProposalTest extends Bas
         ncpc.getRefCustomer().sendKeys(RefCust);
         ncpc.getCreateDraftButton().click();
         /**
-         * Validate the draft status
+         * Verify the draft status
          */
         CommercialInfoForCustomerPage cipc = new CommercialInfoForCustomerPage(driver);
         String actMsg = cipc.getDrafttext().getText();
