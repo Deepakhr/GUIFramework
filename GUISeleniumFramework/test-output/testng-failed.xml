@@ -3,30 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="com.dolibarr.erp.prospectTest.createProspectTest">
-=======
       <class name="com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest">
->>>>>>> branch 'Testing' of https://github.com/AnushaDudekula/Dolibarr_GUIFramework-.git
         <methods>
           <include name="configBC"/>
           <include name="configBS"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBM"/>
-<<<<<<< HEAD
-          <include name="configAM"/>
-          <include name="createProspect"/>
-=======
           <include name="createNewCustomer"/>
           <include name="configAM"/>
->>>>>>> branch 'Testing' of https://github.com/AnushaDudekula/Dolibarr_GUIFramework-.git
         </methods>
-<<<<<<< HEAD
-      </class> <!-- com.dolibarr.erp.prospectTest.createProspectTest -->
-=======
       </class> <!-- com.dolibarr.erp.customertest.CreateNewCustomerWithNewProposalAndValidateProposalTest -->
->>>>>>> branch 'Testing' of https://github.com/AnushaDudekula/Dolibarr_GUIFramework-.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
