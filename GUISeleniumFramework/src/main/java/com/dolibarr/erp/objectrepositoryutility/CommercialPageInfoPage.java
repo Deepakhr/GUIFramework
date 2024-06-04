@@ -12,28 +12,39 @@ public class CommercialPageInfoPage {
 	}
 @FindBy(xpath="//span[contains(@title,'Draft')]")
 private WebElement status;
+
 @FindBy(id="prod_entry_mode_free")
 private WebElement freeTextItem;
 @FindBy(id="select2-select_type-container")
 private WebElement type;
-@FindBy(id="//li[text()='Product']")
+
+@FindBy(xpath="//li[text()='Product']")
 private WebElement selectType;
+
 @FindBy(id="dp_desc")
 private WebElement description; 
+
 @FindBy(id="price_ht")
 private WebElement netPrice;
+
 @FindBy(id="qty")
 private WebElement qty;
+
 @FindBy(id="remise_percent")
 private WebElement discount;
+
 @FindBy(id="addline")
 private WebElement add;
-@FindBy(linkText="Validate")
+
+@FindBy(xpath="//a[text()='Validate']")
 private WebElement validate;
+
 @FindBy(xpath="//button[text()='Yes']")
 private WebElement yesButton;
-@FindBy(xpath="//span[starts-with(@title,'Validated')]")
+
+@FindBy(xpath="//span[contains(@title,'Validated')]")
 private WebElement validateafter;
+
 public WebElement getStatus() {
 	return status;
 }
@@ -62,6 +73,9 @@ public WebElement getAdd() {
 	return add;
 }
 
+public WebElement getYesButton() {
+	return yesButton;
+}
 public WebElement getValidate() {
 	return validate;
 }
@@ -73,6 +87,14 @@ public void addLine(String discription,String Nprice,String qty,String dis) {
 	getFreeTextItem().click();
 	getType().click();
 	getSelectType().click();
+	getDescription().sendKeys(discription);
+	getNetPrice().sendKeys(Nprice);
+	 getQty().sendKeys(qty);
+	 getDiscount().sendKeys(dis);
+	 getAdd().click();
+}
+public void addLineContract(String discription,String Nprice,String qty,String dis) {
+	getFreeTextItem().click();
 	getDescription().sendKeys(discription);
 	getNetPrice().sendKeys(Nprice);
 	 getQty().sendKeys(qty);
