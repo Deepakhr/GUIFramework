@@ -2,6 +2,7 @@ package com.dolibarr.erp.objectrepositoryutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -38,7 +39,11 @@ public class CustomerPage
 		return CreateContractLink;
 	}
 	
-	
+	public void clickCreateProposal()
+	{
+		Actions action= new Actions(driver);
+		action.moveToElement(getCreateProposalLink()).click().perform();
+	}
 	
 	
 	
