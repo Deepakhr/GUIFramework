@@ -35,7 +35,7 @@ public class CreateContractAndValidateAndActivateContractForCustomerTest extends
 		String discription = eLib.getDataFromExcel("ThirdParty",1, 6);
 		String netPrice = eLib.getDataFromExcel("ThirdParty",1, 7);
 		String statusOfService1 = eLib.getDataFromExcel("ThirdParty",1, 12);
-		String statusOfService2 = eLib.getDataFromExcel("ThirdParty",1, 13);
+		String statusOfService_2 = eLib.getDataFromExcel("ThirdParty",1, 13);
 		/**
 		 * Navigating to Third-Parties Menu
 		 */
@@ -107,7 +107,7 @@ public class CreateContractAndValidateAndActivateContractForCustomerTest extends
 		 * Verify the status after activate the contract
 		 */
 		String ActivateStatus = ccp.getActivateStatus().getText();
-		Assert.assertEquals(ActivateStatus, statusOfService2);
+		Assert.assertEquals(ActivateStatus, statusOfService_2);
 		Reporter.log(ActivateStatus+"status is verified",true);
         
         
