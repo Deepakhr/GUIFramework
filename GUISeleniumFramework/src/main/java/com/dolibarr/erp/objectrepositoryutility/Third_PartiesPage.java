@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Third_PartiesPage {
+	
 	WebDriver driver;
 
 	public Third_PartiesPage(WebDriver driver) {
@@ -13,16 +14,16 @@ public class Third_PartiesPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(linkText = "New Customer")
+	@FindBy(xpath="//a[text()='New Customer']")
 	private WebElement NewCustomerLink;
 
-	@FindBy(linkText = "New Prospect")
+	@FindBy(xpath = "//a[text()='New Prospect']")
 	private WebElement NewProspectLink;
 
-	@FindBy(linkText = "List of Customers")
+	@FindBy(xpath = "//a[text()='List of Customers']")
 	private WebElement ListOfCustomersLink;
 
-	@FindBy(linkText = "List of Prospects")
+	@FindBy(xpath = "//a[text()='List of Prospects']")
 	private WebElement ListOfProspectsLink;
 
 	public WebElement getNewCustomerLink() {

@@ -5,26 +5,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CustomerInfoPage 
+public class ListOfCustomerPage
 {
 	WebDriver driver;
-	public CustomerInfoPage(WebDriver driver) 
+	public ListOfCustomerPage(WebDriver driver) 
 	{
-		this.driver= driver;
 		PageFactory.initElements(driver, this); 
 	}
 	
-	@FindBy (linkText= "Customer")
-	private WebElement CustomerLink;
-	
-	public WebDriver getDriver() {
-		return driver;
-	}
+	@FindBy (name="search_nom")
+	private WebElement SearchCust;
 
-	public WebElement getCustomerLink() {
-		return CustomerLink;
+	public WebElement getSearchCust() {
+		return SearchCust;
 	}
-	
 	
 
 }

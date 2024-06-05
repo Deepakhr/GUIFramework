@@ -27,13 +27,23 @@ public class JavaUtility {
 	 * 
 	 * @return
 	 */
+<<<<<<< HEAD
 	public String getSystemDateYYYYDDMM() {
 
+=======
+	public String getSystemDateMMDDYYYY() {
+		
+>>>>>>> branch 'Testing' of https://github.com/beatsane/Dolibarr_GUIFramework.git
 		Date dateObj = new Date();
+<<<<<<< HEAD
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+=======
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-YYYY");
+>>>>>>> branch 'Testing' of https://github.com/beatsane/Dolibarr_GUIFramework.git
 		String date = sdf.format(dateObj);
-		return date;
+		return date.replace('-','/');
 	}
 
 	/**

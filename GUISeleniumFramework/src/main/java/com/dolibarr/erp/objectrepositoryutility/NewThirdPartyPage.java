@@ -9,17 +9,17 @@ import org.openqa.selenium.support.ui.Select;
 public class NewThirdPartyPage
 {
 	WebDriver driver;
-	public NewThirdPartyPage(WebDriver driver) 
-	{
-		this.driver= driver;
-		PageFactory.initElements(driver, this); 
+	public NewThirdPartyPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
-	
 	@FindBy (id="name")
 	private WebElement ThirdPartyNameTextField;
 	
 	@FindBy(id="select2-customerprospect-container")
 	private WebElement SelectCustomerProspect;
+	
+	@FindBy(xpath="//li[text()='Customer']")
+	private WebElement selectCustomer;
 	
 	@FindBy(id="town")
 	private WebElement CityTextField;
@@ -27,6 +27,14 @@ public class NewThirdPartyPage
 	@FindBy(name="save")
 	private WebElement CreateThirdPartyButton;
 	
+	@FindBy(xpath="//li[text()='Prospect']")
+	private WebElement prospect;
+	
+	
+	public WebElement getSelectCustomer() {
+		return selectCustomer;
+	}
+
 	public WebElement getThirdPartyNameTextField() {
 		return ThirdPartyNameTextField;
 	}
@@ -42,6 +50,10 @@ public class NewThirdPartyPage
 	public WebElement getCreateThirdPartyButton() {
 		return CreateThirdPartyButton;
 	}
+	
+	public WebElement getProspect() {
+		return prospect;
+	}
 
 	public void createCustomer(String CName, String CityName)
 	{
@@ -54,18 +66,6 @@ public class NewThirdPartyPage
 		getThirdPartyNameTextField().sendKeys(PName);
 		getCityTextField().sendKeys(CityName);
 	}
-	
-	public void selectCustomer()
-	{
-		Select cs= new Select(SelectCustomerProspect);
-		cs.selectByVisibleText("Customer");
-	}
-	
-	public void selectProspect()
-	{
-		Select cs= new Select(SelectCustomerProspect);
-		cs.selectByVisibleText("Prospect");
-	}
-	
+
 
 }

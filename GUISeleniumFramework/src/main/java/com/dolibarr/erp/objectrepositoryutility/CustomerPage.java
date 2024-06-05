@@ -2,6 +2,7 @@ package com.dolibarr.erp.objectrepositoryutility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,14 +15,18 @@ public class CustomerPage
 		PageFactory.initElements(driver, this); 
 	}
 	
-	@FindBy (linkText= "Create proposal")
+	@FindBy (xpath= "//a[text()='Create proposal']")
 	private WebElement CreateProposalLink;
 	
-	@FindBy (linkText= "Create order")
+	@FindBy ( xpath= "//a[text()='Create order']")
 	private WebElement CreateOrderLink;
 	
-	@FindBy (linkText= "Create contract")
+	@FindBy (xpath= "//a[text()='Create contract']")
 	private WebElement CreateContractLink;
+	
+	@FindBy(xpath="//a[text()='Create invoice or credit note']")
+	private WebElement createInvoiceLink;
+	
 	public WebDriver getDriver() {
 		return driver;
 	}
@@ -39,6 +44,15 @@ public class CustomerPage
 	}
 	
 	
+	public WebElement getCreateInvoiceLink() {
+		return createInvoiceLink;
+	}
+
+	public void clickCreateProposal()
+	{
+		Actions action= new Actions(driver);
+		action.moveToElement(getCreateProposalLink()).click().perform();
+	}
 	
 	
 	
