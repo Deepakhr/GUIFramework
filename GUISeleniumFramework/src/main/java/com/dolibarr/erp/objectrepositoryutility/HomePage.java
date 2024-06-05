@@ -18,7 +18,6 @@ public class HomePage {
 	WebDriverUtility Wlib = new WebDriverUtility();
 	WebDriver driver;
 
-<<<<<<< HEAD
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -26,23 +25,12 @@ public class HomePage {
 
 	@FindBy(xpath = "//div[@id='topmenu-login-dropdown']")
 	private WebElement logoutMenu;
-	
 	@FindBy(xpath = "//span[text()='Logout']")
 	private WebElement logOut;
-	
-=======
-	 public HomePage(WebDriver driver) {            
-		 this.driver = driver;
-		 PageFactory.initElements(driver, this);
-	 }
-	 @FindBy(xpath="//div[@id='topmenu-login-dropdown']")
-	 private WebElement logoutMenu;
-	 @FindBy(xpath="//span[text()='Logout']")
-	 private WebElement logOut;
->>>>>>> branch 'Testing' of https://github.com/beatsane/Dolibarr_GUIFramework.git
+
 	@FindBy(id = "mainmenua_companies")
 	private WebElement thirdPartiesMenu;
-	
+
 	@FindBy(id = "mainmenua_products")
 	private WebElement productsAndServicesMenu;
 
@@ -61,7 +49,7 @@ public class HomePage {
 	public WebElement getLogOut() {
 		return logOut;
 	}
-	
+
 	public void logout() {
 		Wlib.mousemoveOnElement(driver, logoutMenu);
 		getLogoutMenu().click();
