@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
@@ -15,7 +16,7 @@ import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
 import com.dolibarr.erp.objectrepositoryutility.newContractforProspectPage;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
-
+@Listeners(com.dolibarr.erp.generic.listenerutility.ListImpClass.class)
 public class createContractandActivateConTest extends BaseClass{
 @Test
 public void createContractandActivateConTest() throws Throwable  {

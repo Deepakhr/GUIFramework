@@ -42,6 +42,7 @@ public class ContractForCustomerPage
 	
 	@FindBy(xpath="//span[@title='Running']")
 	private WebElement ActivateStatus;
+
 	
 	public WebDriver getDriver() {
 		return driver;
