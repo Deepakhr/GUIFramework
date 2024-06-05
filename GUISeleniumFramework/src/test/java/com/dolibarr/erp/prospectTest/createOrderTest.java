@@ -30,7 +30,7 @@ public void createOrder() throws Throwable {
 	String qty=eLib.getDataFromExcel("ThirdParty",4,8);
 	String dis=eLib.getDataFromExcel("ThirdParty",4,9);
 	String statusmsg=eLib.getDataFromExcel("ThirdParty",4,5);
-	//String statusmsg1=eLib.getDataFromExcel("ThirdParty",4,15);
+	String statusmsg1=eLib.getDataFromExcel("ThirdParty",4,15);
 	/**
 	 * create Prospect
 	 */
@@ -93,8 +93,8 @@ public void createOrder() throws Throwable {
 	/**
 	 * validating status after validate
 	 */
-//	String actmsg1=sop.getAftervalidatestatus().getText();
-//	Assert.assertEquals(actmsg1,statusmsg1);
-//	Reporter.log(actmsg1+"  status is verified",true);
+	String actmsg1=sop.getAftervalidatestatus().getText();
+	Assert.assertEquals(actmsg1,statusmsg1);
+	Reporter.log(actmsg1+"  status is verified",true);
 }
 }

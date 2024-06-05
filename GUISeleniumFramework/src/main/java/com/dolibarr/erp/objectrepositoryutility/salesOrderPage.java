@@ -41,7 +41,7 @@ public class salesOrderPage {
 
 	@FindBy(xpath="//button[text()='Yes']")
 	private WebElement yesButton;
-@FindBy(xpath="//span[text()='Validated'")
+@FindBy(xpath="//span[text()='Validated']")
 private WebElement aftervalidatestatus;
 	public WebElement getStatus() {
 		return status;
