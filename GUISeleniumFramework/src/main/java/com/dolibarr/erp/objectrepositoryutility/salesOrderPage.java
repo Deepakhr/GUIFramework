@@ -15,6 +15,7 @@ public class salesOrderPage {
 
 	@FindBy(id="prod_entry_mode_free")
 	private WebElement freeTextItem;
+	
 	@FindBy(id="select2-select_type-container")
 	private WebElement type;
 
@@ -41,12 +42,16 @@ public class salesOrderPage {
 
 	@FindBy(xpath="//button[text()='Yes']")
 	private WebElement yesButton;
+
    @FindBy(xpath="//span[text()='Validated']")
    private WebElement aftervalidatestatus;
+   
    @FindBy(xpath="//a[text()='Close all contract lines']")
     private WebElement closeContract;
+   
    @FindBy(xpath="(//span[@title='Closed'])[2]")
    private WebElement statusOfCloseContract;
+   
 	public WebElement getStatus() {
 		return status;
 	}

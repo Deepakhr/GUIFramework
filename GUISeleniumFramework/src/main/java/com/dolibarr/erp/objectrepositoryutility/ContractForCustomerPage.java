@@ -84,10 +84,11 @@ public class ContractForCustomerPage
 		return ActivateContractLink;
 	}
 
-	
 	public WebElement getActivateStatus() {
 		return ActivateStatus;
 	}
+	
+	
 
 	public void addline(String Dis, String NetPrice)
 	{
@@ -96,6 +97,7 @@ public class ContractForCustomerPage
 		getNetPrice().sendKeys(NetPrice);
 		getAddButton().click();
 	}
+	
 	
 	
 	

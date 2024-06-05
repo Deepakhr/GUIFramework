@@ -16,6 +16,7 @@ public class CustomerInfoPage
 	
 	@FindBy (linkText= "Customer")
 	private WebElement CustomerLink;
+	
 	public WebDriver getDriver() {
 		return driver;
 	}

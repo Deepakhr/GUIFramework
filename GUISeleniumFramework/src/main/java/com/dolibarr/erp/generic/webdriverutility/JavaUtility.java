@@ -24,13 +24,13 @@ public class JavaUtility {
 	 * get the system date based on YYYY-DD-MM format
 	 * @return
 	 */
-	public String getSystemDateYYYYDDMM() {
+	public String getSystemDateMMDDYYYY() {
 		
 		Date dateObj = new Date();
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-YYYY");
 		String date = sdf.format(dateObj);
-		return date;
+		return date.replace('-','/');
 	}
 	/**
 	 * get the TAT date based on YYYY-DD-MM format

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dolibarr.erp.prospectTest.closingContractForCustomer">
+      <class name="com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest">
         <methods>
-          <include name="closeContract"/>
           <include name="configBC"/>
           <include name="configBS"/>
           <include name="configAC"/>
           <include name="configAS"/>
+          <include name="createInvoice"/>
           <include name="configBM"/>
           <include name="configAM"/>
         </methods>
-      </class> <!-- com.dolibarr.erp.prospectTest.closingContractForCustomer -->
+      </class> <!-- com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

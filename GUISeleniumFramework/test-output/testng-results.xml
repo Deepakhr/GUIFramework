@@ -1,53 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Draft (needs to be validated)  status is verified]]>
+      <![CDATA[Draftstatus is verified]]>
     </line>
     <line>
-      <![CDATA[Validated  status is verified]]>
+      <![CDATA[Not runningstatus is verified]]>
+    </line>
+    <line>
+      <![CDATA[Not paidstatus is verified]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-06-05T11:15:11 IST" name="Default suite" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
+  <suite started-at="2024-06-05T16:46:36 IST" name="Default suite" finished-at="2024-06-05T16:47:03 IST" duration-ms="27216">
     <groups>
     </groups>
-    <test started-at="2024-06-05T11:15:11 IST" name="Default test" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
-      <class name="com.dolibarr.erp.prospectTest.createOrderTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBS" finished-at="2024-06-05T11:15:11 IST" duration-ms="32" status="PASS">
+    <test started-at="2024-06-05T16:46:36 IST" name="Default test" finished-at="2024-06-05T16:47:03 IST" duration-ms="27216">
+      <class name="com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:46:36 IST" name="configBS" finished-at="2024-06-05T16:46:36 IST" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBC" finished-at="2024-06-05T11:15:13 IST" duration-ms="2346" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:46:36 IST" name="configBC" finished-at="2024-06-05T16:46:42 IST" duration-ms="5645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:13 IST" name="configBM" finished-at="2024-06-05T11:15:15 IST" duration-ms="2265" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:46:42 IST" name="configBM" finished-at="2024-06-05T16:46:45 IST" duration-ms="2568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createOrder()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:15 IST" name="createOrder" finished-at="2024-06-05T11:15:26 IST" duration-ms="10336" status="PASS">
+        <test-method signature="createInvoice()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:46:45 IST" name="createInvoice" finished-at="2024-06-05T16:47:02 IST" duration-ms="17680" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [0.00'] but found [Amount (inc. tax)]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [0.00'] but found [Amount (inc. tax)]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest.createInvoice(CreateInvoiceAndValidateTest.java:136)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[Draft (needs to be validated)  status is verified]]>
+              <![CDATA[Draftstatus is verified]]>
             </line>
             <line>
-              <![CDATA[Validated  status is verified]]>
+              <![CDATA[Not runningstatus is verified]]>
+            </line>
+            <line>
+              <![CDATA[Not paidstatus is verified]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createOrder -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:26 IST" name="configAM" finished-at="2024-06-05T11:15:27 IST" duration-ms="825" status="PASS">
+        </test-method> <!-- createInvoice -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:47:02 IST" name="configAM" finished-at="2024-06-05T16:47:03 IST" duration-ms="811" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAC" finished-at="2024-06-05T11:15:27 IST" duration-ms="311" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:47:03 IST" name="configAC" finished-at="2024-06-05T16:47:03 IST" duration-ms="420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAS" finished-at="2024-06-05T11:15:27 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest@5e5d171f]" started-at="2024-06-05T16:47:04 IST" name="configAS" finished-at="2024-06-05T16:47:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.dolibarr.erp.prospectTest.createOrderTest -->
+      </class> <!-- com.dolibarr.erp.customertest.CreateInvoiceAndValidateTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
