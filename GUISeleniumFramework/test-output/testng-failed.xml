@@ -5,9 +5,9 @@
     <classes>
       <class name="com.dolibarr.erp.prospectTest.closingContractForCustomer">
         <methods>
+          <include name="closeContract"/>
           <include name="configBC"/>
           <include name="configBS"/>
-          <include name="closeContract"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBM"/>

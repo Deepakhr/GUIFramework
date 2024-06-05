@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
@@ -16,7 +17,7 @@ import com.dolibarr.erp.objectrepositoryutility.NewContractForCustomerPage;
 import com.dolibarr.erp.objectrepositoryutility.NewThirdPartyPage;
 import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
 import com.dolibarr.erp.objectrepositoryutility.salesOrderPage;
-
+@Listeners(com.dolibarr.erp.generic.listenerutility.ListImpClass.class)
 public class closingContractForCustomer extends BaseClass {
 	@Test
 	public void closeContract() throws Throwable {
@@ -94,6 +95,7 @@ public class closingContractForCustomer extends BaseClass {
 	String ActStatusOfService = ccp.getStatusofService().getText();
 	Assert.assertEquals(ActStatusOfService, statusOfService1);
 	Reporter.log(ActStatusOfService+"   status is verified",true);
+	Assert.fail();
 	/**
 	 * Activate Contract
 	 */

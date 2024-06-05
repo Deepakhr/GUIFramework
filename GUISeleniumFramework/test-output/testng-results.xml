@@ -2,64 +2,52 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Draftstatus is verified]]>
+      <![CDATA[Draft (needs to be validated)  status is verified]]>
     </line>
     <line>
-      <![CDATA[Not running   status is verified]]>
-    </line>
-    <line>
-      <![CDATA[Running  status is verified]]>
-    </line>
-    <line>
-      <![CDATA[Closed   status is verified]]>
+      <![CDATA[Validated  status is verified]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-06-05T10:52:16 IST" name="Default suite" finished-at="2024-06-05T10:52:35 IST" duration-ms="18960">
+  <suite started-at="2024-06-05T11:15:11 IST" name="Default suite" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
     <groups>
     </groups>
-    <test started-at="2024-06-05T10:52:16 IST" name="Default test" finished-at="2024-06-05T10:52:35 IST" duration-ms="18960">
-      <class name="com.dolibarr.erp.prospectTest.closingContractForCustomer">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:16 IST" name="configBS" finished-at="2024-06-05T10:52:16 IST" duration-ms="22" status="PASS">
+    <test started-at="2024-06-05T11:15:11 IST" name="Default test" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
+      <class name="com.dolibarr.erp.prospectTest.createOrderTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBS" finished-at="2024-06-05T11:15:11 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:16 IST" name="configBC" finished-at="2024-06-05T10:52:18 IST" duration-ms="1852" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBC" finished-at="2024-06-05T11:15:13 IST" duration-ms="2346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:18 IST" name="configBM" finished-at="2024-06-05T10:52:21 IST" duration-ms="3111" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:13 IST" name="configBM" finished-at="2024-06-05T11:15:15 IST" duration-ms="2265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="closeContract()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:21 IST" name="closeContract" finished-at="2024-06-05T10:52:35 IST" duration-ms="13131" status="PASS">
+        <test-method signature="createOrder()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:15 IST" name="createOrder" finished-at="2024-06-05T11:15:26 IST" duration-ms="10336" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Draftstatus is verified]]>
+              <![CDATA[Draft (needs to be validated)  status is verified]]>
             </line>
             <line>
-              <![CDATA[Not running   status is verified]]>
-            </line>
-            <line>
-              <![CDATA[Running  status is verified]]>
-            </line>
-            <line>
-              <![CDATA[Closed   status is verified]]>
+              <![CDATA[Validated  status is verified]]>
             </line>
           </reporter-output>
-        </test-method> <!-- closeContract -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:35 IST" name="configAM" finished-at="2024-06-05T10:52:35 IST" duration-ms="581" status="PASS">
+        </test-method> <!-- createOrder -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:26 IST" name="configAM" finished-at="2024-06-05T11:15:27 IST" duration-ms="825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:35 IST" name="configAC" finished-at="2024-06-05T10:52:35 IST" duration-ms="243" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAC" finished-at="2024-06-05T11:15:27 IST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.closingContractForCustomer@c430e6c]" started-at="2024-06-05T10:52:35 IST" name="configAS" finished-at="2024-06-05T10:52:35 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAS" finished-at="2024-06-05T11:15:27 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.dolibarr.erp.prospectTest.closingContractForCustomer -->
+      </class> <!-- com.dolibarr.erp.prospectTest.createOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
