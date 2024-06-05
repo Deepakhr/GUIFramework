@@ -8,24 +8,24 @@
       <![CDATA[Validated  status is verified]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-06-05T09:44:00 IST" name="Default suite" finished-at="2024-06-05T09:44:14 IST" duration-ms="13310">
+  <suite started-at="2024-06-05T11:15:11 IST" name="Default suite" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
     <groups>
     </groups>
-    <test started-at="2024-06-05T09:44:00 IST" name="Default test" finished-at="2024-06-05T09:44:14 IST" duration-ms="13310">
+    <test started-at="2024-06-05T11:15:11 IST" name="Default test" finished-at="2024-06-05T11:15:27 IST" duration-ms="16123">
       <class name="com.dolibarr.erp.prospectTest.createOrderTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:00 IST" name="configBS" finished-at="2024-06-05T09:44:00 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBS" finished-at="2024-06-05T11:15:11 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:00 IST" name="configBC" finished-at="2024-06-05T09:44:02 IST" duration-ms="1929" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:11 IST" name="configBC" finished-at="2024-06-05T11:15:13 IST" duration-ms="2346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:02 IST" name="configBM" finished-at="2024-06-05T09:44:04 IST" duration-ms="1140" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:13 IST" name="configBM" finished-at="2024-06-05T11:15:15 IST" duration-ms="2265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createOrder()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:04 IST" name="createOrder" finished-at="2024-06-05T09:44:13 IST" duration-ms="9503" status="PASS">
+        <test-method signature="createOrder()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:15 IST" name="createOrder" finished-at="2024-06-05T11:15:26 IST" duration-ms="10336" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Draft (needs to be validated)  status is verified]]>
@@ -35,15 +35,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- createOrder -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:13 IST" name="configAM" finished-at="2024-06-05T09:44:13 IST" duration-ms="451" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:26 IST" name="configAM" finished-at="2024-06-05T11:15:27 IST" duration-ms="825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:13 IST" name="configAC" finished-at="2024-06-05T09:44:14 IST" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAC" finished-at="2024-06-05T11:15:27 IST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@c430e6c]" started-at="2024-06-05T09:44:14 IST" name="configAS" finished-at="2024-06-05T09:44:14 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.prospectTest.createOrderTest@4bdeaabb]" started-at="2024-06-05T11:15:27 IST" name="configAS" finished-at="2024-06-05T11:15:27 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

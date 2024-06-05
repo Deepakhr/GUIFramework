@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.dolibarr.erp.generic.basetest.BaseClass;
@@ -15,7 +16,7 @@ import com.dolibarr.erp.objectrepositoryutility.createOrderPage;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
 import com.dolibarr.erp.objectrepositoryutility.salesOrderPage;
-
+@Listeners(com.dolibarr.erp.generic.listenerutility.ListImpClass.class)
 public class createOrderTest extends BaseClass{
 @Test
 public void createOrder() throws Throwable {

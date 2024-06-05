@@ -7,6 +7,7 @@ package com.dolibarr.erp.prospectTest;
 import static org.testng.Assert.assertEquals;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.dolibarr.erp.generic.basetest.BaseClass;
 import com.dolibarr.erp.objectrepositoryutility.CommercialInfoPage;
@@ -18,7 +19,7 @@ import com.dolibarr.erp.objectrepositoryutility.Third_PartiesPage;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTest;
 import com.dolibarr.erp.objectrepositoryutility.prosepectInfoTestPage;
 import com.dolibarr.erp.objectrepositoryutility.prospectPage;
-
+@Listeners(com.dolibarr.erp.generic.listenerutility.ListImpClass.class)
 public class createProspectTest extends BaseClass {
 	/**
 	 * This method used to create prospect and proposal and validate

@@ -41,8 +41,12 @@ public class salesOrderPage {
 
 	@FindBy(xpath="//button[text()='Yes']")
 	private WebElement yesButton;
-@FindBy(xpath="//span[text()='Validated']")
-private WebElement aftervalidatestatus;
+   @FindBy(xpath="//span[text()='Validated']")
+   private WebElement aftervalidatestatus;
+   @FindBy(xpath="//a[text()='Close all contract lines']")
+    private WebElement closeContract;
+   @FindBy(xpath="(//span[@title='Closed'])[2]")
+   private WebElement statusOfCloseContract;
 	public WebElement getStatus() {
 		return status;
 	}
@@ -89,6 +93,14 @@ private WebElement aftervalidatestatus;
 
 	public WebElement getAftervalidatestatus() {
 		return aftervalidatestatus;
+	}
+
+	public WebElement getCloseContract() {
+		return closeContract;
+	}
+
+	public WebElement getStatusOfCloseContract() {
+		return statusOfCloseContract;
 	}
 
 	public void addLine(String discription,String Nprice,String qty,String dis) {
