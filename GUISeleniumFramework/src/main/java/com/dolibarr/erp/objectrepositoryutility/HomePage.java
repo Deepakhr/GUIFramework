@@ -14,7 +14,7 @@ import com.dolibarr.erp.generic.webdriverutility.WebDriverUtility;
  *         Contains Login page elements & business lib like login()
  *
  */
-public class HomePage extends WebDriverUtility {
+public class HomePage {
 	WebDriverUtility Wlib = new WebDriverUtility();
 	WebDriver driver;
 
@@ -25,10 +25,19 @@ public class HomePage extends WebDriverUtility {
 
 	@FindBy(xpath = "//div[@id='topmenu-login-dropdown']")
 	private WebElement logoutMenu;
+	
 	@FindBy(xpath = "//span[text()='Logout']")
 	private WebElement logOut;
+	
 	@FindBy(id = "mainmenua_companies")
 	private WebElement thirdPartiesMenu;
+	
+	@FindBy(id = "mainmenua_products")
+	private WebElement productsAndServicesMenu;
+
+	public WebElement getProductsAndServicesMenu() {
+		return productsAndServicesMenu;
+	}
 
 	public WebElement getThirdPartiesMenu() {
 		return thirdPartiesMenu;
@@ -47,9 +56,12 @@ public class HomePage extends WebDriverUtility {
 		getLogoutMenu().click();
 		getLogOut().click();
 	}
-	
+
 	public void clickOnThirdPartiesMenu() {
 		getThirdPartiesMenu().click();
 	}
 
+	public void clickOnProductsAndServicesMenu() {
+		getProductsAndServicesMenu().click();
+	}
 }

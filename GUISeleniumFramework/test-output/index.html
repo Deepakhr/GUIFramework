@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\CHIDUSD\AppData\Local\Temp\testng-eclipse-1223776826\testng-customsuite.xml</span>
+                    <span>C:\Users\CHIDUSD\AppData\Local\Temp\testng-eclipse-1470589717\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.dolibarr.erp.products_and_services.ProductsAndServicesTest" class="method navigator-link" hash-for-method="myTest">myTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.dolibarr.erp.products_and_services.ProductsAndServicesTest" class="method navigator-link" hash-for-method="CreateServicesAndVerifyInList">CreateServicesAndVerifyInList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.dolibarr.erp.products_and_services.ProductsAndServicesTest" class="method navigator-link" hash-for-method="CreateWarehouseAndProductAndVerify">CreateWarehouseAndProductAndVerify</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +131,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="myTest">
-                  </a> <!-- myTest -->
-                  <span class="method-name">myTest</span>
+                  <a name="CreateServicesAndVerifyInList">
+                  </a> <!-- CreateServicesAndVerifyInList -->
+                  <span class="method-name">CreateServicesAndVerifyInList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateWarehouseAndProductAndVerify">
+                  </a> <!-- CreateWarehouseAndProductAndVerify -->
+                  <span class="method-name">CreateWarehouseAndProductAndVerify</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\CHIDUSD\AppData\Local\Temp\testng-eclipse-1223776826\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\CHIDUSD\AppData\Local\Temp\testng-eclipse-1470589717\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'myTest')
+data.setCell(0, 1, 'CreateWarehouseAndProductAndVerify')
 data.setCell(0, 2, 'com.dolibarr.erp.products_and_services.ProductsAndServicesTest')
-data.setCell(0, 3, 63);
+data.setCell(0, 3, 51432);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'CreateServicesAndVerifyInList')
+data.setCell(1, 2, 'com.dolibarr.erp.products_and_services.ProductsAndServicesTest')
+data.setCell(1, 3, 39175);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 63 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,27 +243,39 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">429 ms</span>
+                <span class="method-start">398 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">21986 ms</span>
+                <span class="method-start">18799 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">myTest</span>
-                <span class="method-start">36134 ms</span>
+                <span class="method-name">CreateServicesAndVerifyInList</span>
+                <span class="method-start">27466 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">36255 ms</span>
+                <span class="method-start">66659 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">68415 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateWarehouseAndProductAndVerify</span>
+                <span class="method-start">70368 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">121806 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">42719 ms</span>
+                <span class="method-start">122835 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">45168 ms</span>
+                <span class="method-start">124858 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T12:01:07 IST" name="Default suite" finished-at="2024-06-03T12:01:52 IST" duration-ms="44782">
+  <suite started-at="2024-06-05T18:12:59 IST" name="Default suite" finished-at="2024-06-05T18:15:04 IST" duration-ms="124468">
     <groups>
     </groups>
-    <test started-at="2024-06-03T12:01:07 IST" name="Default test" finished-at="2024-06-03T12:01:52 IST" duration-ms="44782">
+    <test started-at="2024-06-05T18:12:59 IST" name="Default test" finished-at="2024-06-05T18:15:04 IST" duration-ms="124468">
       <class name="com.dolibarr.erp.products_and_services.ProductsAndServicesTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:07 IST" name="configBS" finished-at="2024-06-03T12:01:07 IST" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:12:59 IST" name="configBS" finished-at="2024-06-05T18:12:59 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:08 IST" name="configBC" finished-at="2024-06-03T12:01:29 IST" duration-ms="21427" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:12:59 IST" name="configBC" finished-at="2024-06-05T18:13:18 IST" duration-ms="18276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:29 IST" name="configBM" finished-at="2024-06-03T12:01:43 IST" duration-ms="14139" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:13:18 IST" name="configBM" finished-at="2024-06-05T18:13:26 IST" duration-ms="8634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="myTest()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:43 IST" name="myTest" finished-at="2024-06-03T12:01:43 IST" duration-ms="63" status="PASS">
+        <test-method signature="CreateServicesAndVerifyInList()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:13:26 IST" name="CreateServicesAndVerifyInList" finished-at="2024-06-05T18:14:05 IST" duration-ms="39175" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:43 IST" name="configAM" finished-at="2024-06-03T12:01:50 IST" duration-ms="6459" status="PASS">
+        </test-method> <!-- CreateServicesAndVerifyInList -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:14:05 IST" name="configAM" finished-at="2024-06-05T18:14:07 IST" duration-ms="1740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:50 IST" name="configAC" finished-at="2024-06-03T12:01:52 IST" duration-ms="2286" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:14:07 IST" name="configBM" finished-at="2024-06-05T18:14:09 IST" duration-ms="1951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="CreateWarehouseAndProductAndVerify()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:14:09 IST" name="CreateWarehouseAndProductAndVerify" finished-at="2024-06-05T18:15:01 IST" duration-ms="51432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateWarehouseAndProductAndVerify -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:15:01 IST" name="configAM" finished-at="2024-06-05T18:15:02 IST" duration-ms="1025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:15:02 IST" name="configAC" finished-at="2024-06-05T18:15:04 IST" duration-ms="1860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@c430e6c]" started-at="2024-06-03T12:01:52 IST" name="configAS" finished-at="2024-06-03T12:01:52 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.dolibarr.erp.products_and_services.ProductsAndServicesTest@312aa7c]" started-at="2024-06-05T18:15:04 IST" name="configAS" finished-at="2024-06-05T18:15:04 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
