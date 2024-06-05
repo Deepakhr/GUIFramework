@@ -32,7 +32,7 @@ public class createProspectTest extends BaseClass {
 		String PName=eLib.getDataFromExcel("ThirdParty", 4, 2)+jLib.getRandomNumber();
 		String city=eLib.getDataFromExcel("ThirdParty", 4, 3);
 		String refcus=eLib.getDataFromExcel("ThirdParty",4,4)+jLib.getRandomNumber();
-		String date=jLib.getSystemDateYYYYDDMM();	
+		String date=jLib.getSystemDateMMDDYYYY();	
 		String statusmsg=eLib.getDataFromExcel("ThirdParty",4,5);
 		String statusmsg1=eLib.getDataFromExcel("ThirdParty",4,10);
 		String discription=eLib.getDataFromExcel("ThirdParty",4,6);

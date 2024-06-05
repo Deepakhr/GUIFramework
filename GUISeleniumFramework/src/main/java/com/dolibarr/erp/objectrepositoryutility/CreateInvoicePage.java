@@ -45,7 +45,7 @@ public class CreateInvoicePage
 	@FindBy(xpath="//li[text()='Cash']")
     private WebElement cashOption;
 	
-	@FindBy(xpath="//input[@name='amount_40']")
+	@FindBy(xpath="//input[contains(@id,'amount')]")
 	private WebElement paymentAmount;
 	
 	@FindBy(xpath="//span[@class='amount classfortooltip']")
@@ -66,7 +66,14 @@ public class CreateInvoicePage
 	@FindBy(xpath="//button[text()='Yes']")
 	private WebElement yesButton;
 	
+	@FindBy(xpath="//td[contains(@class,'right')]")
+	private WebElement paidAmount;
 	
+	
+	public WebElement getPaidAmount() {
+		return paidAmount;
+	}
+
 	public WebElement getYesButton() {
 		return yesButton;
 	}

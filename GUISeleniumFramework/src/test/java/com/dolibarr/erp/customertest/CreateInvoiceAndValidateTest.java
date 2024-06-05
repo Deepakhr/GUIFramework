@@ -1,7 +1,11 @@
 package com.dolibarr.erp.customertest;
-
+/**
+ * @author REKHA GUPTA
+ */
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -30,7 +34,8 @@ public class CreateInvoiceAndValidateTest extends BaseClass{
 		String discription = eLib.getDataFromExcel("ThirdParty",1, 6);
 		String netPrice = eLib.getDataFromExcel("ThirdParty",1, 7);
 		String statusOfService1 = eLib.getDataFromExcel("ThirdParty",1, 12);
-		String statusOfPayment = eLib.getDataFromExcel("ThirdParty",1, 15);
+		String statusOfPayment1 = eLib.getDataFromExcel("ThirdParty",1, 15);
+		String statusOfPayment2 = eLib.getDataFromExcel("ThirdParty",1, 16);
 		/**
 		 * Navigating to Third-Parties Menu
 		 */
@@ -97,7 +102,8 @@ public class CreateInvoiceAndValidateTest extends BaseClass{
 		/**
 		 * Create invoice
 		 */
-		String invoiceDate = jLib.getSystemDateYYYYDDMM();
+		String invoiceDate = jLib.getSystemDateMMDDYYYY();
+		System.out.println(invoiceDate);
 		CreateInvoicePage cip1= new CreateInvoicePage(driver);
 		cip1.getCreate().click();
 		cip1.getCreateInvoiceLink().click();
@@ -111,7 +117,7 @@ public class CreateInvoiceAndValidateTest extends BaseClass{
 		cip1.getValidateLink().click();
 		cip1.getYesButton().click();
 		String payStatus = cip1.getPaymentStatus().getText();
-		Assert.assertEquals(payStatus, statusOfPayment);
+		Assert.assertEquals(payStatus, statusOfPayment1);
 		Reporter.log(payStatus+"status is verified",true);
 		/**
 		 * Enter amount
@@ -121,11 +127,16 @@ public class CreateInvoiceAndValidateTest extends BaseClass{
 		cip1.getPaymentOption().click();
 		cip1.getCashOption().click();
 		String AmountToPay = cip1.getActualAmount().getText();
-		cip1.getPaymentAmount().sendKeys(AmountToPay);
+		System.out.println("AmountToPay: "+AmountToPay);
+		WebElement PaymentAmountText = cip1.getPaymentAmount();
+		Actions action= new Actions(driver);
+		action.moveToElement(PaymentAmountText).click().sendKeys(AmountToPay).perform();
 		cip1.getPayButton().click();
 		cip1.confirmOption();
 		cip1.getValidateButton().click();
-		
+		String paidStatus = cip1.getPaidAmount().getText();
+		Assert.assertEquals(paidStatus, statusOfPayment2);
+		Reporter.log(payStatus+"status is verified",true);
 		
 		
 		
