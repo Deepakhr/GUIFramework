@@ -212,10 +212,10 @@ public class NewProductPage {
 		getPrivateNoteTextBox().sendKeys(data.get(14) + randomNum);
 		getSellingPriceTextField().sendKeys(data.get(14));
 		getMinSellingPriceTextField().sendKeys(data.get(15));
-		getSaleAccountingCodeTextField().sendKeys(data.get(16) + randomNum);
-		getSaleExportAccountingCodeTextField().sendKeys(data.get(16) + randomNum);
-		getPurchaseAccountingCodeTextField().sendKeys(data.get(16) + randomNum);
-		getPurchaseImportAccountingCodeTextField().sendKeys(data.get(16) + randomNum);
+		getSaleAccountingCodeTextField().sendKeys(""+randomNum);
+		getSaleExportAccountingCodeTextField().sendKeys(""+randomNum);
+		getPurchaseAccountingCodeTextField().sendKeys(""+randomNum);
+		getPurchaseImportAccountingCodeTextField().sendKeys(""+randomNum);
 		getCreateButton().click();
 	}
 

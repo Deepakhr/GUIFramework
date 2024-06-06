@@ -23,13 +23,13 @@ public class ProductsAndServicesTest extends BaseClass {
 	ExcelUtility excelUtility = new ExcelUtility();
 	JavaUtility javaUtility = new JavaUtility();
 
-	@Test
+	@Test(priority = -1)
 	public void CreateWarehouseAndProductAndVerify() throws Throwable {
 
 		ArrayList<String> warehouseData = new ArrayList<String>();
 		ArrayList<String> productData = new ArrayList<String>();
 		warehouseData = excelUtility.getArrayListFromExcel("ProductsAndServices", 7, 2);
-		productData = excelUtility.getArrayListFromExcel("ProductsAndServices", 9, 2);
+		productData = excelUtility.getArrayListFromExcel("ProductsAndServices", 10, 2);
 		int randomNum = javaUtility.getRandomNumber();
 
 		HomePage homePage = new HomePage(driver);
@@ -57,11 +57,11 @@ public class ProductsAndServicesTest extends BaseClass {
 		Assert.assertTrue(driver.findElement(By.xpath(path)).isDisplayed());
 	}
 
-	@Test
+	@Test(priority = 0)
 	public void CreateServicesAndVerifyInList() throws Throwable {
 
 		ArrayList<String> serviceData = new ArrayList<String>();
-		serviceData = excelUtility.getArrayListFromExcel("ProductsAndServices", 12, 2);
+		serviceData = excelUtility.getArrayListFromExcel("ProductsAndServices", 13, 2);
 		int randomNum = javaUtility.getRandomNumber();
 
 		HomePage homePage = new HomePage(driver);
